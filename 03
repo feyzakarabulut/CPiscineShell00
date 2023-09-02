@@ -1,0 +1,19 @@
+fkarabul@k1m06s11 ~ % cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDY7MvZHEieb9q1f73GJmKPWmlJa024eGMCSbe14OFRvDyhnyHbvP6C/c8kfziVBD9I0/9c8z74b6hOA0S4LtZf5UdOoRUkSJJtSI+/lpTei2chjZJgJrhs59o5tYAraOtAF1IL2H1QVBDWrLmD/qfMYTVsvgiyCocCmLqBIYdU/5RzBPX6dseKc+/CGk0vF519MyYJBV2/rU+wGKwabopi2svXATPYxkHX1ts5yjQOrNUL7IlC7uczwOmgxf5QQUoGNCcODAb6qJla63AD35wO2rvnh21p5WpK8BscqhS7KuW+KZZJHQvPX7S8qrrVOBm9DymSNVGJ8Ui16HsCIKfbt/dVKrQMBA7dd1NHOrApZWDS9sLg/tG2qys4ZQMAOATu76sp+KxfasHoTOlBb1utnPYJgzk7eM9ZZoXV0e7aEQ5kkBAYaW58Ql7Z6rauqte1kK8chcBLZIBvq9FXiW7Jdg60DL6E/l7k2Q5/kNK5+8fjNZihrW3Z7h4TZhZQOYs= fkarabul@k1m06s11.42istanbul.com.tr
+fkarabul@k1m06s11 ~ % cd ..
+fkarabul@k1m06s11 /Users % ls
+Shared		bocal		deepthought	fkarabul
+fkarabul@k1m06s11 /Users % cd fkarabul 
+fkarabul@k1m06s11 ~ % ls
+Desktop		Documents	Downloads	Library		goinfre
+fkarabul@k1m06s11 ~ % cd Desktop 
+fkarabul@k1m06s11 Desktop % ls
+PLAY_ME.webloc	shell00
+fkarabul@k1m06s11 Desktop % cd shell00 
+fkarabul@k1m06s11 shell00 % ls
+ex00	ex01	ex02	ex03
+fkarabul@k1m06s11 shell00 % cd ex03
+fkarabul@k1m06s11 ex03 % ls
+id_rsa_pub
+fkarabul@k1m06s11 ex03 % vim id_rsa_pub 
+fkarabul@k1m06s11 ex03 % 
