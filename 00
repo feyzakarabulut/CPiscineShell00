@@ -1,0 +1,13 @@
+cd desktop
+mkdir shell00
+cd shell00 
+mkdir ex00
+cd ex00
+touch z
+vim z
+i
+Z
+esc
+:wq!
+cat z
+
