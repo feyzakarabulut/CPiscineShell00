@@ -1,0 +1,377 @@
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+k1m06s11:~ fkarabul$ cd zsh
+-bash: cd: zsh: No such file or directory
+k1m06s11:~ fkarabul$ desktop
+-bash: desktop: command not found
+k1m06s11:~ fkarabul$ cd desktop
+k1m06s11:desktop fkarabul$ cd shell00
+k1m06s11:shell00 fkarabul$ mkdir ex01
+k1m06s11:shell00 fkarabul$ cd ex01
+k1m06s11:ex01 fkarabul$ touch testShell00
+k1m06s11:ex01 fkarabul$ ls -l
+total 0
+-rw-r--r--  1 fkarabul  2023_istanbul  0 Sep  2 17:07 testShell00
+k1m06s11:ex01 fkarabul$ tar -cf testShell00.tar testShell00
+k1m06s11:ex01 fkarabul$ zsh
+fkarabul@k1m06s11 ex01 % cd
+fkarabul@k1m06s11 ~ % cd desktop
+fkarabul@k1m06s11 desktop % cd shell00
+fkarabul@k1m06s11 shell00 % mkdir ex02
+fkarabul@k1m06s11 shell00 % cd ex02
+fkarabul@k1m06s11 ex02 % mkdir f
+fkarabul@k1m06s11 ex02 % mkdir e
+fkarabul@k1m06s11 ex02 % ls -l
+total 0
+drwxr-xr-x  2 fkarabul  2023_istanbul  68 Sep  2 17:19 e
+drwxr-xr-x  2 fkarabul  2023_istanbul  68 Sep  2 17:19 f
+fkarabul@k1m06s11 ex02 % mkdir y
+fkarabul@k1m06s11 ex02 % mkdir z
+fkarabul@k1m06s11 ex02 % mkdir a
+fkarabul@k1m06s11 ex02 % ls -l
+total 0
+drwxr-xr-x  2 fkarabul  2023_istanbul  68 Sep  2 17:20 a
+drwxr-xr-x  2 fkarabul  2023_istanbul  68 Sep  2 17:19 e
+drwxr-xr-x  2 fkarabul  2023_istanbul  68 Sep  2 17:19 f
+drwxr-xr-x  2 fkarabul  2023_istanbul  68 Sep  2 17:20 y
+drwxr-xr-x  2 fkarabul  2023_istanbul  68 Sep  2 17:20 z
+fkarabul@k1m06s11 ex02 % clear
+
+fkarabul@k1m06s11 ex02 % mkdir f   
+fkarabul@k1m06s11 ex02 % chmod 751 f
+fkarabul@k1m06s11 ex02 % -rwx--xr-- 1 XX XX 4 Jun 1 21:46 test1
+dr-x---r-- 2 XX XX XX Jun 1 22:45 test2
+-r-----r-- 2 XX XX 1 Jun 1 23:44 test3
+-rw-r----x 1 XX XX 2 Jun 1 23:43 test4
+-r-----r-- 2 XX XX 1 Jun 1 23:44 test5
+ clear
+zsh: command not found: -rwx--xr--
+zsh: command not found: dr-x---r--
+zsh: command not found: -r-----r--
+zsh: command not found: -rw-r----x
+zsh: command not found: -r-----r--
+
+
+
+
+
+
+
+
+
+
+
+fkarabul@k1m06s11 ex02 % ls -l | awk '{print $1, $9}'
+total 
+drwxr-x--x f
+fkarabul@k1m06s11 ex02 % clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fkarabul@k1m06s11 ex02 % rm-rf f
+zsh: command not found: rm-rf
+fkarabul@k1m06s11 ex02 % rm -rf f
+fkarabul@k1m06s11 ex02 % touch test0
+fkarabul@k1m06s11 ex02 % ls     
+fkarabul@k1m06s11 ex02 % mkdir exo2
+fkarabul@k1m06s11 ex02 % cd exo2
+fkarabul@k1m06s11 exo2 % touch test0
+fkarabul@k1m06s11 exo2 % vim test0
+fkarabul@k1m06s11 exo2 % mkdir test0
+fkarabul@k1m06s11 exo2 % cd test0
+fkarabul@k1m06s11 test0 % chmode 715 test0
+zsh: command not found: chmode
+fkarabul@k1m06s11 test0 % chmode 715
+zsh: command not found: chmode
+fkarabul@k1m06s11 test0 % chmode 715 -test0
+zsh: command not found: chmode
+fkarabul@k1m06s11 test0 % chmode 715 cd ..
+zsh: command not found: chmode
+fkarabul@k1m06s11 test0 % cd ..
+fkarabul@k1m06s11 exo2 % cd ..
+fkarabul@k1m06s11 ex02 % rm -rf exo2
+fkarabul@k1m06s11 ex02 % cd ..  
+fkarabul@k1m06s11 shell00 % rm -rf ex02
+fkarabul@k1m06s11 shell00 % mkdir ex02
+fkarabul@k1m06s11 shell00 % cd ex02
+fkarabul@k1m06s11 ex02 % mkdir test0 test2
+fkarabul@k1m06s11 ex02 % mkdir test1 test3 test4 
+fkarabul@k1m06s11 ex02 % rm -rf test1
+fkarabul@k1m06s11 ex02 % rm -rf test3
+fkarabul@k1m06s11 ex02 % rm -rf test4
+fkarabul@k1m06s11 ex02 % touch test1 test3 test4
+fkarabul@k1m06s11 ex02 % ln -f test5
+ln: test5: No such file or directory
+fkarabul@k1m06s11 ex02 % ln -f test3 test5
+fkarabul@k1m06s11 ex02 % ln -s test0 test6
+fkarabul@k1m06s11 ex02 % ls -l
+total 8
+drwxr-xr-x  2 fkarabul  2023_istanbul  68 Sep  2 17:37 test0
+-rw-r--r--  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test1
+drwxr-xr-x  2 fkarabul  2023_istanbul  68 Sep  2 17:37 test2
+-rw-r--r--  2 fkarabul  2023_istanbul   0 Sep  2 17:38 test3
+-rw-r--r--  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test4
+-rw-r--r--  2 fkarabul  2023_istanbul   0 Sep  2 17:38 test5
+lrwxr-xr-x  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % chmod 715 test0
+fkarabul@k1m06s11 ex02 % chmod 714 test1
+fkarabul@k1m06s11 ex02 % chmod 504 test2
+fkarabul@k1m06s11 ex02 % chmod 404 test3
+fkarabul@k1m06s11 ex02 % chmod 641 test4
+fkarabul@k1m06s11 ex02 % ls -l
+total 8
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Sep  2 17:37 test0
+-rwx--xr--  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Sep  2 17:37 test2
+-r-----r--  2 fkarabul  2023_istanbul   0 Sep  2 17:38 test3
+-rw-r----x  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test4
+-r-----r--  2 fkarabul  2023_istanbul   0 Sep  2 17:38 test5
+lrwxr-xr-x  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % chmod 777 test6
+fkarabul@k1m06s11 ex02 % ls -l
+total 8
+drwxrwxrwx  2 fkarabul  2023_istanbul  68 Sep  2 17:37 test0
+-rwx--xr--  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Sep  2 17:37 test2
+-r-----r--  2 fkarabul  2023_istanbul   0 Sep  2 17:38 test3
+-rw-r----x  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test4
+-r-----r--  2 fkarabul  2023_istanbul   0 Sep  2 17:38 test5
+lrwxr-xr-x  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % chmod 715 test0
+fkarabul@k1m06s11 ex02 % ls -l
+total 8
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Sep  2 17:37 test0
+-rwx--xr--  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Sep  2 17:37 test2
+-r-----r--  2 fkarabul  2023_istanbul   0 Sep  2 17:38 test3
+-rw-r----x  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test4
+-r-----r--  2 fkarabul  2023_istanbul   0 Sep  2 17:38 test5
+lrwxr-xr-x  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % chmod -h 777 test6
+fkarabul@k1m06s11 ex02 % ls -l
+total 8
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Sep  2 17:37 test0
+-rwx--xr--  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Sep  2 17:37 test2
+-r-----r--  2 fkarabul  2023_istanbul   0 Sep  2 17:38 test3
+-rw-r----x  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test4
+-r-----r--  2 fkarabul  2023_istanbul   0 Sep  2 17:38 test5
+lrwxrwxrwx  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % touch -t 06012047 test0
+fkarabul@k1m06s11 ex02 % ls -l
+total 8
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Jun  1 20:47 test0
+-rwx--xr--  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Sep  2 17:37 test2
+-r-----r--  2 fkarabul  2023_istanbul   0 Sep  2 17:38 test3
+-rw-r----x  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test4
+-r-----r--  2 fkarabul  2023_istanbul   0 Sep  2 17:38 test5
+lrwxrwxrwx  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % touch -t 06012146 test1
+fkarabul@k1m06s11 ex02 % touch -t 06012245 test2
+fkarabul@k1m06s11 ex02 % touch -t 06012344 test3
+fkarabul@k1m06s11 ex02 % vim test0    
+
+zsh: suspended  vim test0
+fkarabul@k1m06s11 ex02 % vim test1
+fkarabul@k1m06s11 ex02 % ls -l
+total 16
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Jun  1 20:47 test0
+-rwx--xr--  1 fkarabul  2023_istanbul   2 Sep  2 17:53 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Jun  1 22:45 test2
+-r-----r--  2 fkarabul  2023_istanbul   0 Jun  1 23:44 test3
+-rw-r----x  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test4
+-r-----r--  2 fkarabul  2023_istanbul   0 Jun  1 23:44 test5
+lrwxrwxrwx  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % vim tes1
+fkarabul@k1m06s11 ex02 % vim test1
+fkarabul@k1m06s11 ex02 % ls -l
+total 16
+-rw-r--r--  1 fkarabul  2023_istanbul   0 Sep  2 17:53 tes1
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Jun  1 20:47 test0
+-rwx--xr--  1 fkarabul  2023_istanbul   1 Sep  2 17:53 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Jun  1 22:45 test2
+-r-----r--  2 fkarabul  2023_istanbul   0 Jun  1 23:44 test3
+-rw-r----x  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test4
+-r-----r--  2 fkarabul  2023_istanbul   0 Jun  1 23:44 test5
+lrwxrwxrwx  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % vim test3
+fkarabul@k1m06s11 ex02 % ls -l
+total 32
+-rw-r--r--  1 fkarabul  2023_istanbul   0 Sep  2 17:53 tes1
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Jun  1 20:47 test0
+-rwx--xr--  1 fkarabul  2023_istanbul   1 Sep  2 17:53 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Jun  1 22:45 test2
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:54 test3
+-rw-r----x  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test4
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:54 test5
+lrwxrwxrwx  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % vim test3
+fkarabul@k1m06s11 ex02 % ls -l
+total 32
+-rw-r--r--  1 fkarabul  2023_istanbul   0 Sep  2 17:53 tes1
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Jun  1 20:47 test0
+-rwx--xr--  1 fkarabul  2023_istanbul   1 Sep  2 17:53 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Jun  1 22:45 test2
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:55 test3
+-rw-r----x  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test4
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:55 test5
+lrwxrwxrwx  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % vim test3
+fkarabul@k1m06s11 ex02 % ls -l
+total 32
+-rw-r--r--  1 fkarabul  2023_istanbul   0 Sep  2 17:53 tes1
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Jun  1 20:47 test0
+-rwx--xr--@ 1 fkarabul  2023_istanbul   1 Sep  2 17:53 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Jun  1 22:45 test2
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:56 test3
+-rw-r----x  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test4
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:56 test5
+lrwxrwxrwx  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % clear
+
+fkarabul@k1m06s11 ex02 % vim ls -l
+fkarabul@k1m06s11 ex02 % ls -l
+total 32
+-rw-r--r--  1 fkarabul  2023_istanbul   0 Sep  2 17:57 ls
+-rw-r--r--  1 fkarabul  2023_istanbul   0 Sep  2 17:53 tes1
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Jun  1 20:47 test0
+-rwx--xr--@ 1 fkarabul  2023_istanbul   1 Sep  2 17:53 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Jun  1 22:45 test2
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:56 test3
+-rw-r----x  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test4
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:56 test5
+lrwxrwxrwx  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % ls -l
+total 32
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Jun  1 20:47 test0
+-rwx--xr--@ 1 fkarabul  2023_istanbul   1 Sep  2 17:53 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Jun  1 22:45 test2
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:56 test3
+-rw-r----x  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test4
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:56 test5
+lrwxrwxrwx  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % xim test3
+zsh: command not found: xim
+fkarabul@k1m06s11 ex02 % vim test3
+fkarabul@k1m06s11 ex02 % ls -l
+total 32
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Jun  1 20:47 test0
+-rwx--xr--@ 1 fkarabul  2023_istanbul   1 Sep  2 17:53 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Jun  1 22:45 test2
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:58 test3
+-rw-r----x  1 fkarabul  2023_istanbul   0 Sep  2 17:38 test4
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:58 test5
+lrwxrwxrwx  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % vim test4
+fkarabul@k1m06s11 ex02 % ls -l
+total 40
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Jun  1 20:47 test0
+-rwx--xr--@ 1 fkarabul  2023_istanbul   1 Sep  2 17:53 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Jun  1 22:45 test2
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:58 test3
+-rw-r----x  1 fkarabul  2023_istanbul   4 Sep  2 17:59 test4
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:58 test5
+lrwxrwxrwx  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % vim test4
+fkarabul@k1m06s11 ex02 % ls -l
+total 40
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Jun  1 20:47 test0
+-rwx--xr--@ 1 fkarabul  2023_istanbul   1 Sep  2 17:53 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Jun  1 22:45 test2
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:58 test3
+-rw-r----x  1 fkarabul  2023_istanbul   3 Sep  2 18:00 test4
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:58 test5
+lrwxrwxrwx  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % vim test4
+fkarabul@k1m06s11 ex02 % ls -l
+total 40
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Jun  1 20:47 test0
+-rwx--xr--@ 1 fkarabul  2023_istanbul   1 Sep  2 17:53 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Jun  1 22:45 test2
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:58 test3
+-rw-r----x  1 fkarabul  2023_istanbul   2 Sep  2 18:02 test4
+-r-----r--  2 fkarabul  2023_istanbul   1 Sep  2 17:58 test5
+lrwxrwxrwx  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % touch -t 06012146 test1
+fkarabul@k1m06s11 ex02 % touch -t 06012245 test2
+fkarabul@k1m06s11 ex02 % touch -t 06012344 test 3
+fkarabul@k1m06s11 ex02 % rm -rf test
+fkarabul@k1m06s11 ex02 % rm -rf 3
+fkarabul@k1m06s11 ex02 % touch -t 06012344 test3
+fkarabul@k1m06s11 ex02 % ls -l
+total 40
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Jun  1 20:47 test0
+-rwx--xr--@ 1 fkarabul  2023_istanbul   1 Jun  1 21:46 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Jun  1 22:45 test2
+-r-----r--  2 fkarabul  2023_istanbul   1 Jun  1 23:44 test3
+-rw-r----x  1 fkarabul  2023_istanbul   2 Sep  2 18:02 test4
+-r-----r--  2 fkarabul  2023_istanbul   1 Jun  1 23:44 test5
+lrwxrwxrwx  1 fkarabul  2023_istanbul   5 Sep  2 17:41 test6 -> test0
+fkarabul@k1m06s11 ex02 % touch -t 06012343 test4
+fkarabul@k1m06s11 ex02 % touch -h  06012220 test6
+fkarabul@k1m06s11 ex02 % ls -l
+total 40
+drwx--xr-x  2 fkarabul  2023_istanbul  68 Jun  1 20:47 test0
+-rwx--xr--@ 1 fkarabul  2023_istanbul   1 Jun  1 21:46 test1
+dr-x---r--  2 fkarabul  2023_istanbul  68 Jun  1 22:45 test2
+-r-----r--  2 fkarabul  2023_istanbul   1 Jun  1 23:44 test3
+-rw-r----x  1 fkarabul  2023_istanbul   2 Jun  1 23:43 test4
+-r-----r--  2 fkarabul  2023_istanbul   1 Jun  1 23:44 test5
+lrwxrwxrwx  1 fkarabul  2023_istanbul   5 Jun  1 22:20 test6 -> test0
+fkarabul@k1m06s11 ex02 % tar -cf exo2.tar*
+zsh: no matches found: exo2.tar*
+fkarabul@k1m06s11 ex02 % tar -cf exo2.tar *
+fkarabul@k1m06s11 ex02 % cd ex02
+cd: no such file or directory: ex02
+fkarabul@k1m06s11 ex02 % tar -cf exo2.tar *
+: Can't add archive to itself%                                                  fkarabul@k1m06s11 ex02 % rm -rf exo2.tar
+fkarabul@k1m06s11 ex02 % cd ..
+fkarabul@k1m06s11 shell00 % tar -cf exo2.tar
+*
+tar: no files or directories specified
+zsh: command not found: ex00
+fkarabul@k1m06s11 shell00 % cd ex02 
+fkarabul@k1m06s11 ex02 % tar -cf exo2.tar *
+fkarabul@k1m06s11 ex02 % ls  
+exo2.tar	test1		test3		test5
+test0		test2		test4		test6
+fkarabul@k1m06s11 ex02 % rm -rf test1
+fkarabul@k1m06s11 ex02 % rm -rf test2
+fkarabul@k1m06s11 ex02 % rm -rf test3
+fkarabul@k1m06s11 ex02 % rm -rf test4
+fkarabul@k1m06s11 ex02 % rm -rf test5
+fkarabul@k1m06s11 ex02 % rm -rf test6
+fkarabul@k1m06s11 ex02 % ls
+exo2.tar	test0
+fkarabul@k1m06s11 ex02 % rm -rf test0
+fkarabul@k1m06s11 ex02 % cd ..
+fkarabul@k1m06s11 shell00 %  cd ex01
+fkarabul@k1m06s11 ex01 % rm -rf testShell00
+fkarabul@k1m06s11 ex01 % open testShell00.tar 
+fkarabul@k1m06s11 ex01 % rm -rf testShell00
+fkarabul@k1m06s11 ex01 % ls -l
+total 8
+-rw-r--r--@ 1 fkarabul  2023_istanbul  1536 Sep  2 17:07 testShell00.tar
+fkarabul@k1m06s11 ex01 % cd ex02
+cd: no such file or directory: ex02
+fkarabul@k1m06s11 ex01 % 
